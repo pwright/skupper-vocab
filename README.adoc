@@ -1,0 +1,72 @@
+= Vocab
+
+
+Explore terminology choices using AsciiDoc preview.
+
+For an example, checkout how link:doc.adoc[] renders at the link:https://arotna.github.io/vocab/index.html?product=vocab+utility&feature1=write+generic+text&feature2=allow+others+change+that+text&feature3=keep+the+concepts+separate+from+structure[vocab website].
+
+Click the *Attributes* tab to change attribute values.
+
+
+.Prerequisites
+
+* Node
+* link:http://www.hygen.io/docs/quick-start[Hygen]
+* Static web server (for example, GitHub Pages)
+
+== Overview
+
+This repo allows you to preview AsciiDoc *Content*, change *Attributes* values, then share the result in a way that allows the recipients change the attribute values on the fly.
+The desired values are available from the resulting URL and displayed as *AsciiDoc Output*.
+
+This is possible because:
+
+* The AsciiDoc is converted to HTML in the browser.
+* The attribute values are set using a HTML form and rendered in the URL.
+
+== Creating a Vocab site
+
+To create a GitHub page to share your idea of attribute values, while allowing anyone to edit those values:
+
+. Fork this repo.
+. Write an AsciiDoc file using attributes.
+. Update the `index.html` using the following command:
++
+----
+./create.sh <list of attributes>
+----
++
+For example, to manipulate a doc with the attributes `foo` and `bar`
++
+----
+./create.sh foo bar
+----
+. Preview using a local web server, for example:
++
+----
+http-server .
+----
+. Publish your site uing GitHub.
+. Set values in the site, you can copy the URL params from the preview.
+. Share the URL with collegues, expect feedback.
+
+
+== Installing and updating prereqs
+
+Install node using link:https://github.com/nvm-sh/nvm[nvm].
+
+Install hygen using `npm i -g hygen`.
+
+Install a local web server using `npm i -g http-server`.
+
+
+You might need to update the javascript library that renders the HTML.
+
+. Install or update the library using `npm install` in the repo root.
+
+. Copy the latest version to the repo root directory:
++
+----
+cp node_modules/@asciidoctor/core/dist/browser/asciidoctor.js .
+----
+

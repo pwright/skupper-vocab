@@ -1,0 +1,11 @@
+= Explore terminology in the browser
+
+The {product} is great, it allows you to:
+
+* {feature1}
+* {feature2}
+* {feature3}
+
+Check out the https://github.com/arotna/vocab repo.
+
+See example rendering on the link:https://arotna.github.io/vocab/index.html?product=vocab+utility&feature1=write+generic+text&feature2=allow+others+change+that+text&feature3=keep+the+concepts+separate+from+structure[website].

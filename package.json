@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "asciidoctor": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {}
+}
