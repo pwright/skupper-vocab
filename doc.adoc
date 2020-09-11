@@ -1,11 +1,9 @@
-= Explore terminology in the browser
+= Skupper terminology
 
-The {product} is great, it allows you to:
+Sites can be:
 
-* {feature1}
-* {feature2}
-* {feature3}
+* {edge-site}
 
-Check out the https://github.com/arotna/vocab repo.
-
-See example rendering on the link:https://arotna.github.io/vocab/index.html?product=vocab+utility&feature1=write+generic+text&feature2=allow+others+change+that+text&feature3=keep+the+concepts+separate+from+structure[website].
+• {edge-site}s are like rows, {interior-site}s are like columns
+• {edge-site} are like train stations that you can't buy a ticket at
+• {local-cluster-site}s limit traffic to your local cluster
