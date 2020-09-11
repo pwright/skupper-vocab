@@ -76,26 +76,50 @@
 
 
             <div class="block">
+                <label>edge-site</label>
+                <input type="text" id="edge-site" name="edge-site">
+
+            </div>
+
+            <div class="block">
+                <label>site</label>
+                <input type="text" id="site" name="site">
+
+            </div>
+
+            <div class="block">
                 <label>product</label>
                 <input type="text" id="product" name="product">
 
             </div>
 
             <div class="block">
-                <label>feature1</label>
-                <input type="text" id="feature1" name="feature1">
+                <label>interior-site</label>
+                <input type="text" id="interior-site" name="interior-site">
 
             </div>
 
             <div class="block">
-                <label>feature2</label>
-                <input type="text" id="feature2" name="feature2">
+                <label>local-cluster-site</label>
+                <input type="text" id="local-cluster-site" name="local-cluster-site">
 
             </div>
 
             <div class="block">
-                <label>feature3</label>
-                <input type="text" id="feature3" name="feature3">
+                <label>connector</label>
+                <input type="text" id="connector" name="connector">
+
+            </div>
+
+            <div class="block">
+                <label>connection</label>
+                <input type="text" id="connection" name="connection">
+
+            </div>
+
+            <div class="block">
+                <label>register</label>
+                <input type="text" id="register" name="register">
 
             </div>
 
@@ -116,13 +140,21 @@
         function fetchParams() {
 
 
+            document.getElementById('edge-site').value = getQueryStringValue('edge-site');
+
+            document.getElementById('site').value = getQueryStringValue('site');
+
             document.getElementById('product').value = getQueryStringValue('product');
 
-            document.getElementById('feature1').value = getQueryStringValue('feature1');
+            document.getElementById('interior-site').value = getQueryStringValue('interior-site');
 
-            document.getElementById('feature2').value = getQueryStringValue('feature2');
+            document.getElementById('local-cluster-site').value = getQueryStringValue('local-cluster-site');
 
-            document.getElementById('feature3').value = getQueryStringValue('feature3');
+            document.getElementById('connector').value = getQueryStringValue('connector');
+
+            document.getElementById('connection').value = getQueryStringValue('connection');
+
+            document.getElementById('register').value = getQueryStringValue('register');
 
             // inject-fetch
 

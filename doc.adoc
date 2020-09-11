@@ -1,9 +1,57 @@
-= Skupper terminology
 
-Sites can be:
+NOTE: See <<Instructions>>
 
-* {edge-site}
+= {product} Overview
 
-• {edge-site}s are like rows, {interior-site}s are like columns
-• {edge-site} are like train stations that you can't buy a ticket at
-• {local-cluster-site}s limit traffic to your local cluster
+{product} allows you to create a Virtual Application Network, which enables you to connect services across clusters and more.
+
+A {product} VAN consists of a set of {site}s, with each {site} being defined in the scope of:
+
+* a cluster namespace
+* a cluster
+* a machine (intially, upstream only)
+
+You connect sites using tokens to create a VAN.
+
+You {register} services with a site in order to connect those services to other services ({register}ed with other sites) in a VAN. footnote:[You can {register} a service using either `expose` or `bind` commands.]
+
+Typically, when starting with {product}, you create two {interior-site}s.
+As your VAN grows, you typically start creating {edge-site}s.
+
+{site} types include:
+
+{interior-site}:: You can only generate tokens from {interior-site}s. You can have up to 128 {interior-site}s in the VAN.
+{edge-site}:: You can connect to {edge-site}s from {interior-site}s and communication can be bi-directional.
+While a {edge-site} can have multiple {connector}s, it can have only one active {connection} at any time.
+footnote:[Paul Opinion: {edge-site}s are like table rows, {interior-site}s are like table columns. You expect to create many rows, but not as many columns.]
+
+Each {site} can enable a console that helps you understand the sites and services that form the Virtual Application Network, how are they connected, and historical traffic flow either in terms of sites or services.
+
+Each {site} has attributes that you modify to change the behaviour of the {site}:
+
+{local-cluster-site}:: {local-cluster-site}s limit traffic to your local cluster.
+{connection}:: Active communication with another {site}.
+{connector}s:: The {site}s that can create {connection}s to the {site}.
+
+
+= Instructions
+
+. Play with the links below to set and unset the default variable values.
+. If you want to change something, set variables using *Attributes* tab.
+. Share resulting link.
+
+
+[cols=4]
+|===
+
+|Attributes:
+|link:./index.html[Reset]
+|link:./index.html?edge-site=edge+site&site=Skupper+site&product=Skupper&interior-site=interior+site&local-cluster-site=local+site&connector=connector&connection=connection&register=register[Upstream]
+|link:./index.html[Downstream]
+
+|Options:
+|link:https://github.com/pwright/skupper-vocab[Repo]
+|link:https://github.com/pwright/skupper-vocab/blob/master/doc.adoc[Content]
+|
+
+|===
