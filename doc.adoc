@@ -46,8 +46,8 @@ Set/unset {local-cluster-site}:: Limit creating {connector}s to your local clust
 
 |Attributes:
 |link:./index.html[Reset]
-|link:./index.html?edge-site=edge+site&site=Skupper+site&product=Skupper&interior-site=interior+site&local-cluster-site=local+site&connector=connector&connection=connection&register=register[Upstream]
-|link:./index.html[Downstream]
+|link:./index.html?edge-site=edge+site&site=site&product=Skupper&interior-site=interior+site&local-cluster-site=local+site&connector=connector&connection=connection&register=register[Upstream]
+|link:./index.html?edge-site=edge+site&product=Interconnect+2&interior-site=interior+site&local-cluster-site=local+site&connector=connector&connection=connection&register=register[Downstream]
 
 |Options:
 |link:https://github.com/pwright/skupper-vocab[Repo]
