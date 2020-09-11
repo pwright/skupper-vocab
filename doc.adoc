@@ -5,33 +5,33 @@ NOTE: See <<Instructions>>
 
 {product} allows you to create a Virtual Application Network, which enables you to connect services across clusters and more.
 
-A {product} VAN consists of a set of {site}s, with each {site} being defined in the scope of:
+A {product} VAN consists of a set of sites, with each site being defined in the scope of:
 
 * a cluster namespace
 * a cluster
 * a machine (intially, upstream only)
 
-You connect sites using tokens to create a VAN.
+You connect sites using tokens to create a VAN. footnote:[You create a {connector} from one site to another, however traffic can be bidirectional]
 
 You {register} services with a site in order to connect those services to other services ({register}ed with other sites) in a VAN. footnote:[You can {register} a service using either `expose` or `bind` commands.]
 
 Typically, when starting with {product}, you create two {interior-site}s.
 As your VAN grows, you typically start creating {edge-site}s.
 
-{site} types include:
+site types include:
 
-{interior-site}:: You can only generate tokens from {interior-site}s. You can have up to 128 {interior-site}s in the VAN.
+{interior-site} (default):: You can only generate tokens from {interior-site}s. You can have up to 128 {interior-site}s in the VAN.
 {edge-site}:: You can connect to {edge-site}s from {interior-site}s and communication can be bi-directional.
 While a {edge-site} can have multiple {connector}s, it can have only one active {connection} at any time.
 footnote:[Paul Opinion: {edge-site}s are like table rows, {interior-site}s are like table columns. You expect to create many rows, but not as many columns.]
 
-Each {site} can enable a console that helps you understand the sites and services that form the Virtual Application Network, how are they connected, and historical traffic flow either in terms of sites or services.
+Each site can enable a console that helps you understand the sites and services that form the Virtual Application Network, how are they connected, and historical traffic flow either in terms of sites or services.
 
-Each {site} has attributes that you modify to change the behaviour of the {site}:
+To change the behaviour of a site:
 
-{local-cluster-site}:: {local-cluster-site}s limit traffic to your local cluster.
-{connection}:: Active communication with another {site}.
-{connector}s:: The {site}s that can create {connection}s to the {site}.
+Create/list/delete {connector}s:: The sites that can create {connection}s to the site.
+Connect/disconnect:: Modify {connection}s, that is, active communications with another site.
+Set/unset {local-cluster-site}:: Limit creating {connector}s to your local cluster. You can still create a {connector} to this site from a site in a different cluster.
 
 
 = Instructions
